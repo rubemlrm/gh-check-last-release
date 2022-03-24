@@ -1,0 +1,19 @@
+name: 'Get Repo Last Release'
+description: 'Get the latest release from'
+inputs:
+  owner:
+    description: 'user/organization that owns the repository'
+    required: true
+  repo:
+    description: 'The repository name'
+    required: true
+outputs:
+  release:
+    description: 'release name'
+  id:
+    description: 'release ID'
+  body:
+    description: 'release body'
+runs:
+  using: 'node12'
+  main: 'main.js'
