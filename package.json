@@ -1,0 +1,22 @@
+{
+    "name": "gh-check-last-release",
+    "version": "0.0.1",
+    "description": "Retrieve information from the last repository release",
+    "main": "main.js",
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc && ncc build",
+        "format": "prettier --write **/*.ts",
+        "format-check": "prettier --check **/*.ts",
+        "lint": "eslint src/**/*.ts"
+    },
+    "dependencies": {
+        "@actions/core": "^1.2.6",
+        "@actions/github": "^4.0.0",
+        "@octokit/rest": "^18.0.9"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.16.0"
+    }
+}

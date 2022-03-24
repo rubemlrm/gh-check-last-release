@@ -15,5 +15,5 @@ outputs:
   body:
     description: 'release body'
 runs:
-  using: 'node12'
-  main: 'main.js'
+  using: node16
+  main: dist/main.js
