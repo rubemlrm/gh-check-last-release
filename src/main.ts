@@ -6,7 +6,9 @@ const repo = core.getInput('repo');
 
 async function run(): Promise<void> {
   try {
-    const octokit = github.getOctokit('');
+    const githubToken = core.getInput('github_token', { required: true });
+
+    const octokit = github.getOctokit(githubToken);
     const lastRelease = await octokit.repos.getLatestRelease({
       owner: owner,
       repo: repo

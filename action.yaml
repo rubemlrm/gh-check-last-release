@@ -7,6 +7,9 @@ inputs:
   repo:
     description: 'The repository name'
     required: true
+  github_token:
+    description: A GitHub token.
+    required: true
 outputs:
   release:
     description: 'release name'

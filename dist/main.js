@@ -39,7 +39,8 @@ const repo = core.getInput('repo');
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const octokit = github.getOctokit('');
+            const githubToken = core.getInput('github_token', { required: true });
+            const octokit = github.getOctokit(githubToken);
             const lastRelease = yield octokit.repos.getLatestRelease({
                 owner: owner,
                 repo: repo
