@@ -1,5 +1,8 @@
 name: 'Get Repo Last Release'
 description: 'Get the latest release from'
+branding:
+  icon: 'archive'
+  color: 'green'
 inputs:
   owner:
     description: 'user/organization that owns the repository'
@@ -11,12 +14,22 @@ inputs:
     description: A GitHub token.
     required: true
 outputs:
+  tag_name:
+    description: The tag of the last release
   release:
     description: 'release name'
   id:
     description: 'release ID'
   body:
     description: 'release body'
+  created_at:
+    description: 'release created at'
+  published_at:
+    description: 'release published at'
+  tarball_url:
+    description: 'release tarball url'
+  zipball_url:
+    description: 'release zipball url'
 runs:
   using: node16
   main: dist/main.js

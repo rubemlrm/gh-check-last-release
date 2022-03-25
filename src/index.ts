@@ -14,9 +14,14 @@ async function run(): Promise<void> {
       repo: repo
     });
     if (lastRelease) {
-      core.setOutput('release', lastRelease.data.tag_name);
+      core.setOutput('tag_name', lastRelease.data.tag_name);
+      core.setOutput('release', lastRelease.data.name);
       core.setOutput('id', String(lastRelease.data.id));
       core.setOutput('body', lastRelease.data.body);
+      core.setOutput('created_at', lastRelease.data.created_at);
+      core.setOutput('published_at', lastRelease.data.published_at);
+      core.setOutput('tarball_url', lastRelease.data.tarball_url);
+      core.setOutput('zipball_url', lastRelease.data.zipball_url);
     } else {
       core.setFailed("Don't have a last release");
     }
