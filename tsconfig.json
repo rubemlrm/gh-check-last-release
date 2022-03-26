@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es6",
     "module": "commonjs",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "rootDir": "./src",
-    "strict": false,
-    "noImplicitAny": true,
+    "strict": true,
     "esModuleInterop": true,
-    "moduleResolution": "node"
+    "sourceMap": true
   },
   "exclude": ["node_modules", "**/*.test.ts"]
 }
